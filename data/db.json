@@ -2,19 +2,23 @@
     "users": [
         {
             "id": 0,
-            "name": "Lisa Williams"
+            "name": "Lisa Williams",
+            "hobbies": ["programming", "drawing", "playing chess", "running"]
         },
         {
             "id": 1,
-            "name": "Bernd Krohn"
+            "name": "Bernd Krohn",
+            "hobbies": ["swimming", "cooking", "travelling", "reading"]
         },
         {
             "id": 2,
-            "name": "Hannah Karrasch"
+            "name": "Hannah Karrasch",
+            "hobbies": ["studying", "writing", "programming", "reading"]
         },
         {
             "id": 3,
-            "name": "Paula Stuck"
+            "name": "Paula Stuck",
+            "hobbies": ["dancing", "sleeping", "rocket science", "running"]
         }
     ]
 }
