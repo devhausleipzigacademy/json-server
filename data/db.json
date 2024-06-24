@@ -1,0 +1,20 @@
+{
+    "users": [
+        {
+            "id": 0,
+            "name": "Lisa Williams"
+        },
+        {
+            "id": 1,
+            "name": "Bernd Krohn"
+        },
+        {
+            "id": 2,
+            "name": "Hannah Karrasch"
+        },
+        {
+            "id": 3,
+            "name": "Paula Stuck"
+        }
+    ]
+}
