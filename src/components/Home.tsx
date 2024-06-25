@@ -12,6 +12,9 @@ function Home() {
         </Link>
       </div>
       <Outlet />
+
+      <button onClick={() => {}}>Click me</button>
+      <button onClick={function handleClick() {}}>Click me</button>
     </>
   );
 }

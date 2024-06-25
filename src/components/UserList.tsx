@@ -12,14 +12,12 @@ function UserList() {
           <th className="w-1/6 text-left">Name</th>
           <th className="text-left">Hobbies</th>
         </tr>
-        {data.users.map((user) => {
-          return (
-            <tr>
-              <td>{user.name}</td>
-              <td>{user.hobbies.join(", ")}</td>
-            </tr>
-          );
-        })}
+        {data.users.map((user) => (
+          <tr>
+            <td>{user.name}</td>
+            <td>{user.hobbies.join(", ")}</td>
+          </tr>
+        ))}
       </table>
     </>
   );
