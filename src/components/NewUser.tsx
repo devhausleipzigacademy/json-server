@@ -6,21 +6,35 @@ function NewUser() {
   const data = useLoaderData() as { users: User[] };
 
   // get last free ID from Database
-  let id = data.users.reduce((lastId, users) => {
+  let currId = data.users.reduce((lastId, users) => {
     return users.id > lastId ? users.id : lastId;
   }, 0);
-
-  id++;
-
-  console.log(id);
+  currId++;
 
   const [name, setName] = useState("");
   const [hobbies, setHobbies] = useState("");
 
   function handleSubmit(e: Event) {
     e.preventDefault();
-    console.log(name);
-    console.log(hobbies);
+    if (name === "" || hobbies === "") return;
+    const newUser = {
+      id: currId,
+      name: name,
+      hobbies: hobbies.split(", "),
+    };
+    postNewUser(newUser);
+  }
+
+  function postNewUser(newUser: User) {
+    fetch("http://localhost:8000/users", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newUser),
+    })
+      .then((response) => response.json())
+      .then(() => console.log("POST SUCCESS"));
   }
 
   return (

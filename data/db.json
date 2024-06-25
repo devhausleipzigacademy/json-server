@@ -1,24 +1,51 @@
 {
-    "users": [
-        {
-            "id": 0,
-            "name": "Lisa Williams",
-            "hobbies": ["programming", "drawing", "playing chess", "running"]
-        },
-        {
-            "id": 1,
-            "name": "Bernd Krohn",
-            "hobbies": ["swimming", "cooking", "travelling", "reading"]
-        },
-        {
-            "id": 2,
-            "name": "Hannah Karrasch",
-            "hobbies": ["studying", "writing", "programming", "reading"]
-        },
-        {
-            "id": 3,
-            "name": "Paula Stuck",
-            "hobbies": ["dancing", "sleeping", "rocket science", "running"]
-        }
-    ]
+  "users": [
+    {
+      "id": "0",
+      "name": "Lisa Williams",
+      "hobbies": [
+        "programming",
+        "drawing",
+        "playing chess",
+        "running"
+      ]
+    },
+    {
+      "id": "1",
+      "name": "Bernd Krohn",
+      "hobbies": [
+        "swimming",
+        "cooking",
+        "travelling",
+        "reading"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Hannah Karrasch",
+      "hobbies": [
+        "studying",
+        "writing",
+        "programming",
+        "reading"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Paula Stuck",
+      "hobbies": [
+        "dancing",
+        "sleeping",
+        "rocket science",
+        "running"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Luzie",
+      "hobbies": [
+        "swimming"
+      ]
+    }
+  ]
 }
