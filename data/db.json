@@ -46,6 +46,13 @@
       "hobbies": [
         "swimming"
       ]
+    },
+    {
+      "id": 5,
+      "name": "Jana",
+      "hobbies": [
+        "drawing"
+      ]
     }
   ]
 }

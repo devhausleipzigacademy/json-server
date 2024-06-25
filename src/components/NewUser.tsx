@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, FormEvent } from "react";
 import { useLoaderData } from "react-router-dom";
 import { User } from "../utils/types";
 
@@ -14,7 +14,7 @@ function NewUser() {
   const [name, setName] = useState("");
   const [hobbies, setHobbies] = useState("");
 
-  function handleSubmit(e: Event) {
+  function handleSubmit(e: FormEvent) {
     e.preventDefault();
     if (name === "" || hobbies === "") return;
     const newUser = {
