@@ -7,13 +7,13 @@ import Home from "./components/Home.tsx";
 import UserList from "./components/UserList.tsx";
 import NewUser from "./components/NewUser.tsx";
 
-export async function userLoader() {
-  const response = await fetch("http://localhost:8000/users");
-  const users: User[] = await response.json();
-  return {
-    users,
-  };
-}
+// export async function userLoader() {
+//   const response = await fetch("http://localhost:8000/users");
+//   const users: User[] = await response.json();
+//   return {
+//     users,
+//   };
+// }
 
 const router = createBrowserRouter([
   {
@@ -23,12 +23,12 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <UserList />,
-        loader: userLoader,
+        // loader: userLoader,
       },
       {
         path: "new-user",
         element: <NewUser />,
-        loader: userLoader,
+        // loader: userLoader,
       },
     ],
   },

@@ -1,6 +1,7 @@
-import { useState, FormEvent } from "react";
+import { FormEvent } from "react";
 import { useLoaderData } from "react-router-dom";
 import { User } from "../utils/types";
+import { useFormField } from "../utils/hooks";
 
 function NewUser() {
   const data = useLoaderData() as { users: User[] };
@@ -11,16 +12,16 @@ function NewUser() {
   }, 0);
   currId++;
 
-  const [name, setName] = useState("");
-  const [hobbies, setHobbies] = useState("");
+  const name = useFormField("");
+  const hobbies = useFormField("");
 
   function handleSubmit(e: FormEvent) {
     e.preventDefault();
-    if (name === "" || hobbies === "") return;
+    if (name.value === "" || hobbies.value === "") return;
     const newUser = {
       id: currId,
-      name: name,
-      hobbies: hobbies.split(", "),
+      name: name.value,
+      hobbies: hobbies.value.split(", "),
     };
     postNewUser(newUser);
   }
@@ -46,8 +47,9 @@ function NewUser() {
           <input
             className="border-solid border-2"
             type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            // {...name}
+            value={name.value}
+            onChange={name.onChange}
           />
         </label>
         <label>
@@ -55,8 +57,9 @@ function NewUser() {
           <input
             className="border-solid border-2"
             type="text"
-            value={hobbies}
-            onChange={(e) => setHobbies(e.target.value)}
+            // {...hobbies}
+            value={hobbies.value}
+            onChange={hobbies.onChange}
           />
         </label>
 
