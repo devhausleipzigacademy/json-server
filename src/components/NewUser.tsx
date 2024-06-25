@@ -1,13 +1,26 @@
 import { useState } from "react";
+import { useLoaderData } from "react-router-dom";
+import { User } from "../utils/types";
 
 function NewUser() {
+  const data = useLoaderData() as { users: User[] };
+
+  // get last free ID from Database
+  let id = data.users.reduce((lastId, users) => {
+    return users.id > lastId ? users.id : lastId;
+  }, 0);
+
+  id++;
+
+  console.log(id);
+
   const [name, setName] = useState("");
   const [hobbies, setHobbies] = useState("");
 
-  function handleSubmit() {
-    {
-      /* log in the console, the values of the form */
-    }
+  function handleSubmit(e: Event) {
+    e.preventDefault();
+    console.log(name);
+    console.log(hobbies);
   }
 
   return (
