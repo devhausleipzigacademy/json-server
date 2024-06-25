@@ -3,8 +3,11 @@ import { Outlet } from "react-router-dom";
 function Home() {
   return (
     <>
-      <h1>Home</h1>
-      <Outlet />
+      <div>
+        <h1>Home</h1>
+        {/* Add a new route for creating a new user */}
+        <Outlet />
+      </div>
     </>
   );
 }
