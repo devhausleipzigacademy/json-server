@@ -13,10 +13,11 @@ function NewUser() {
   return (
     <>
       <h1>Create new user.</h1>
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+      <form onSubmit={handleSubmit} className="p-5 flex flex-col gap-4">
         <label>
           Enter your name:
           <input
+            className="border-solid border-2"
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
@@ -25,13 +26,17 @@ function NewUser() {
         <label>
           Enter your hobbies:
           <input
+            className="border-solid border-2"
             type="text"
             value={hobbies}
             onChange={(e) => setHobbies(e.target.value)}
           />
         </label>
 
-        <input type="submit" />
+        <input
+          className="w-1/2 border-solid border-2 rounded-sm cursor-pointer"
+          type="submit"
+        />
       </form>
     </>
   );
