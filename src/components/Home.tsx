@@ -1,13 +1,17 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 
 function Home() {
   return (
     <>
-      <div>
-        <h1>Home</h1>
-        {/* Add a new route for creating a new user */}
-        <Outlet />
+      <div className="flex gap-5 p-5">
+        <Link to="/">
+          <h3>Home</h3>
+        </Link>
+        <Link to="new-user">
+          <h3>New User</h3>
+        </Link>
       </div>
+      <Outlet />
     </>
   );
 }

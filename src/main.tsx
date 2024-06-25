@@ -5,6 +5,7 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./components/Home.tsx";
 import UserList from "./components/UserList.tsx";
+import NewUser from "./components/NewUser.tsx";
 
 export async function userLoader() {
   const response = await fetch("http://localhost:8000/users");
@@ -22,6 +23,11 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <UserList />,
+        loader: userLoader,
+      },
+      {
+        path: "new-user",
+        element: <NewUser />,
         loader: userLoader,
       },
     ],
