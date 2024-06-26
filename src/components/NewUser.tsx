@@ -48,6 +48,8 @@ function NewUser() {
             className="border-solid border-2"
             type="text"
             // {...name}
+            // value={value}
+            // onChange={onChange}
             value={name.value}
             onChange={name.onChange}
           />
