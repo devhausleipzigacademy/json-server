@@ -1,16 +1,15 @@
 import { FormEvent } from "react";
-import { useLoaderData } from "react-router-dom";
 import { User } from "../utils/types";
 import { useFormField } from "../utils/hooks";
 
 function NewUser() {
-  const data = useLoaderData() as { users: User[] };
+  // const data = useLoaderData() as { users: User[] };
 
   // get last free ID from Database
-  let currId = data.users.reduce((lastId, users) => {
-    return users.id > lastId ? users.id : lastId;
-  }, 0);
-  currId++;
+  // let currId = data.users.reduce((lastId, users) => {
+  //   return users.id > lastId ? users.id : lastId;
+  // }, 0);
+  // currId++;
 
   const name = useFormField("");
   const hobbies = useFormField("");
@@ -19,14 +18,13 @@ function NewUser() {
     e.preventDefault();
     if (name.value === "" || hobbies.value === "") return;
     const newUser = {
-      id: currId,
       name: name.value,
       hobbies: hobbies.value.split(", "),
     };
     postNewUser(newUser);
   }
 
-  function postNewUser(newUser: User) {
+  function postNewUser(newUser: Omit<User, "id">) {
     fetch("http://localhost:8000/users", {
       method: "POST",
       headers: {

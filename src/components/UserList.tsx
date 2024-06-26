@@ -32,7 +32,9 @@ function UserList() {
               <td>Loading...</td>
             </tr>
           ) : (
-            data?.map((user) => <UserItem user={user} refetch={refetch} />)
+            data?.map((user) => (
+              <UserItem key={user.id} user={user} refetch={refetch} />
+            ))
           )}
         </tbody>
       </table>
