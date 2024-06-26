@@ -36,9 +36,14 @@ export function useFetch<T>(url: string) {
     fetchData();
   }, []);
 
+  function refetch() {
+    fetchData();
+  }
+
   return {
     data,
     error,
     isLoading,
+    refetch,
   };
 }

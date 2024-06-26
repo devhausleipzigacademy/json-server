@@ -46,28 +46,6 @@
       "hobbies": [
         "swimming"
       ]
-    },
-    {
-      "id": "5",
-      "name": "Jana",
-      "hobbies": [
-        "drawing"
-      ]
-    },
-    {
-      "id": 6,
-      "name": "Joe",
-      "hobbies": [
-        "Pizza",
-        "Milk"
-      ]
-    },
-    {
-      "id": 7,
-      "name": "Tom",
-      "hobbies": [
-        "Football"
-      ]
     }
   ]
 }
